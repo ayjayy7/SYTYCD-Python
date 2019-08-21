@@ -14,7 +14,7 @@ signature_price = 2.750
 cupcake_shop_name = "Get Baked"
 signature_flavors = ['tuna', 'salmon', 'red herring']
 order_list = []
-
+cupcake_menu=[]
 
 def print_menu():
     """
@@ -33,7 +33,7 @@ def print_originals():
     """
     print("Our original flavor cupcakes (KD %s each):" % original_price)
     for item in original_flavors:
-    print("- \"%s\"" % item)
+        print("- \"%s\"" % item)
 
 
 def print_signatures():
@@ -65,7 +65,7 @@ def get_order():
     """
     order_list = []
     order = input("What's your order? (Enter the exact spelling of the item you want. Type 'Exit' to end your order.)\n")
-    while order.lowercase() != "exit":
+    while order.lower() != "exit":
         if is_valid_order(order):
             order_list.append(order)
         order = input()
